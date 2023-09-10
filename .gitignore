@@ -47,3 +47,5 @@ Source/.vs/*
 *.idb
 *.tlog
 Bin/imgui.ini
+*.recipe
+Source/imgui.ini

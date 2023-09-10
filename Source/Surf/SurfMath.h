@@ -126,6 +126,9 @@ struct Vector3Component
     constexpr Vector3Component(T _xyz) : x(_xyz), y(_xyz), z(_xyz) {}
     constexpr Vector3Component(T _x, T _y, T _z) : x(_x), y(_y), z(_z) {}
 
+    template<typename V>
+    constexpr Vector3Component(V _x, V _y, V _z) : x(static_cast<T>(_x)), y(static_cast<T>(_y)), z(static_cast<T>(_z)) {}
+
     Vector3Component& operator+=(const Vector3Component& rhs)
     {
         this->x += rhs.x;
