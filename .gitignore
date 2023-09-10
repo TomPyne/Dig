@@ -44,3 +44,6 @@ Source/.vs/*
 *.exe
 *.out
 *.app
+*.idb
+*.tlog
+Bin/imgui.ini

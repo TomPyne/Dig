@@ -139,7 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ImGui\imgui_impl_render.cpp" />
-    <ClCompile Include="Render Example.cpp" />
+    <ClCompile Include="DigGameMain.cpp" />
     <ClCompile Include="Render\Binding.cpp" />
     <ClCompile Include="Render\Buffers.cpp" />
     <ClCompile Include="Render\CommandList.cpp" />
@@ -183,6 +183,9 @@
     <ClInclude Include="Render\Shaders.h" />
     <ClInclude Include="Render\Textures.h" />
     <ClInclude Include="Render\View.h" />
+    <ClInclude Include="Surf\HighResolutionClock.h" />
+    <ClInclude Include="Surf\KeyCodes.h" />
+    <ClInclude Include="Surf\SurfMath.h" />
     <ClInclude Include="ThirdParty\imgui\examples\imgui_impl_win32.h" />
     <ClInclude Include="ThirdParty\imgui\imconfig.h" />
     <ClInclude Include="ThirdParty\imgui\imgui.h" />
