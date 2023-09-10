@@ -186,6 +186,7 @@
     <ClInclude Include="Surf\HighResolutionClock.h" />
     <ClInclude Include="Surf\KeyCodes.h" />
     <ClInclude Include="Surf\SurfMath.h" />
+    <ClInclude Include="ThirdParty\FastNoiseLite\FastNoistLite.h" />
     <ClInclude Include="ThirdParty\imgui\examples\imgui_impl_win32.h" />
     <ClInclude Include="ThirdParty\imgui\imconfig.h" />
     <ClInclude Include="ThirdParty\imgui\imgui.h" />

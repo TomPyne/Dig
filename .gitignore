@@ -28,7 +28,6 @@ Source/.vs/*
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -38,7 +37,6 @@ Source/.vs/*
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.exe
@@ -46,6 +44,8 @@ Source/.vs/*
 *.app
 *.idb
 *.tlog
-Bin/imgui.ini
+
+*imgui.ini
 *.recipe
-Source/imgui.ini
+
+Source/x64/*

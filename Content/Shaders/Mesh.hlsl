@@ -45,7 +45,7 @@ float4 main(PS_INPUT input) : SV_Target0
 
     float ndl = saturate(dot(n, -l));
 
-    return float4((ndl + 0.1).rrr, 1); 
+    return float4((ndl * 0.8 + 0.1).rrr, 1); 
 };
 
 #endif

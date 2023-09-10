@@ -11,6 +11,7 @@
 
 #include "ThirdParty/imgui/imgui.h"
 #include "ThirdParty/imgui/examples/imgui_impl_win32.h"
+#include "ThirdParty/FastNoiseLite/FastNoistLite.h"
 #include "ImGui/imgui_impl_render.h"
 
 #include <bitset>
@@ -464,19 +465,35 @@ int main()
 	// Set up entities
 	MeshMaterial material = CreateMaterial();
 
+	FastNoiseLite noise;
+	noise.SetNoiseType(FastNoiseLite::NoiseType_OpenSimplex2);
+
 	VoxelWorld world;
 
-	for (u32 y = 0; y < 128; y++)
+	for (u32 y = 0; y < 512; y++)
 	{
-		for (u32 x = 0; x < 128; x++)
+		for (u32 x = 0; x < 512; x++)
 		{
-			u32 height = (u32)(fabsf(sinf((float)x * 0.2f)) * 16);
+			const float n = (noise.GetNoise((float)x, (float)y) + 1.0f) * 0.5f;
+			const u32 height = (u32)(n * 32);
 			for (u32 h = 0; h < height; h++)
 			{
 				world.AddVoxel(x, h, y);
 			}
 		}
 	}
+
+	//for (u32 y = 0; y < 256; y++)
+	//{
+	//	for (u32 x = 0; x < 256; x++)
+	//	{
+	//		for (u32 z = 0; z < 128; z++)
+	//		{
+	//			if (noise.GetNoise((float)x * 4, (float)y * 4, (float)z * 4) > 0.0f)
+	//				world.AddVoxel(x, z, y);
+	//		}
+	//	}
+	//}
 
 	// Main loop
 	bool bQuit = false;
